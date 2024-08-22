@@ -74,7 +74,7 @@ This command will set up a Docker container running macOS Ventura (`ventura`), w
 
 ## 🛠 Setup Instructions
 
-1. **Start the container and connect to the web VNC port using your browser. Use the port number you specified during setup (default is 8006).
+1. **Start the container** and connect to the web VNC port using your browser. Use the port number you specified during setup (default is 8006).
 
 2. **Choose Disk Utility** and then select the largest Apple Inc. VirtIO Block Media disk.
 
