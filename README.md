@@ -1,6 +1,3 @@
-Here's a README for your `macosmaker` project:
-
----
 
 # 🍏 macOS Docker Container Setup Script 🚀
 
@@ -75,6 +72,22 @@ This command will set up a Docker container running macOS Ventura (`ventura`), w
 - `monterey`: macOS Monterey
 - `big-sur`: macOS Big Sur
 
+## 🛠 Setup Instructions
+
+1. **Start the container and connect to the web VNC port using your browser. Use the port number you specified during setup (default is 8006).
+
+2. **Choose Disk Utility** and then select the largest Apple Inc. VirtIO Block Media disk.
+
+3. **Click the Erase button** to format the disk, and give it any recognizable name you like.
+
+4. **Close the current window** and proceed with the installation by clicking Reinstall macOS.
+
+5. **When prompted where you want to install it**, select the disk you just created previously.
+
+6. **After all files are copied**, select your region, language, and account settings.
+
+7. **Enjoy your brand new machine**, and don't forget to star this repo!
+
 ## 🙌 Acknowledgments
 
 This project is based on [dockur/macos](https://github.com/dockur/macos.git). Huge thanks to the original creator for their work!
@@ -90,3 +103,5 @@ This project is licensed under the MIT License.
 Feel free to reach out if you have any questions or need assistance:
 - Telegram: [@mohfreestyl](https://t.me/mohfreestyl)
 - Website Contact Form: [mohamedmaamir.com](https://mohamedmaamir.com)
+
+---
