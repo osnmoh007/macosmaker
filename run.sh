@@ -48,6 +48,37 @@ while [[ "$#" -gt 0 ]]; do
     shift
 done
 
+# Prompt for RAM size if not set by flag
+if [ -z "$RAM_SIZE" ]; then
+    read -p "Enter RAM size (e.g., 14 for 14G): " RAM_SIZE
+    RAM_SIZE="${RAM_SIZE}G"
+fi
+
+# Prompt for CPU cores if not set by flag
+if [ -z "$CPU_CORES" ]; then
+    read -p "Enter the number of CPU cores (e.g., 6): " CPU_CORES
+fi
+
+# Prompt for disk size if not set by flag
+if [ -z "$DISK_SIZE" ]; then
+    read -p "Enter the disk size (e.g., 64G): " DISK_SIZE
+fi
+
+# Prompt for machine name if not set by flag
+if [ -z "$MACHINE_NAME" ]; then
+    read -p "Enter the machine name: " MACHINE_NAME
+fi
+
+# Prompt for VNC port if not set by flag
+if [ -z "$VNC_PORT" ]; then
+    read -p "Enter the VNC port (e.g., 5900): " VNC_PORT
+fi
+
+# Prompt for web VNC port if not set by flag
+if [ -z "$WEB_VNC_PORT" ]; then
+    read -p "Enter the host port for web VNC (e.g., 8006): " WEB_VNC_PORT
+fi
+
 # Check if Docker is installed
 if ! command -v docker &> /dev/null; then
     echo "Docker not found. Installing Docker..."
@@ -115,11 +146,6 @@ if [ -z "$MACOS_CODE" ]; then
             break
         fi
     done
-fi
-
-# Prompt for machine name and ports if not set by flags
-if [ -z "$MACHINE_NAME" ]; then
-    read -p "Enter the machine name: " MACHINE_NAME
 fi
 
 # Check the availability of VNC port
